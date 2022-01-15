@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="startTime()">
+	<ul class="navigation">
+	  <li><a class="active" href="index.html">HOME</a></li>
+	  <li><a href="biodata.html">BIODATA</a></li>
+	  <li><a href="experience.html">EXPERIENCE</a></li>
+	  <li><a href="education.html">EDUCATION</a></li>
+	  <li><a href="family.html">FAMILY</a></li>
+	  <li><a href="gallery.html">GALLERY</a></li>
+	  <li><a href="contactme.html">CONTACT ME</a></li>
+	</ul>
+	<br />
+	<div style="text-align: center;"><p id="time" style="text-align: center; font-size: 30px; background-color: white; display: inline; padding: 10px;">text</p></div>
+	<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+	</script>
+	<p style="text-align: center;"><img class="homepage" src="source/home.png" /></p>
+	<div class="garis_putih_homepage">
+		<h1 style="text-decoration: underline;">SYAZWANI ROZAIDI</h1>
+		<p style="font-style: italic; font-size: 25px;">A girl who is cheerful and likes to try new things? Yes, that is myself. I was the youngest child in my family and was given the name Syazwani. I am a person who is not interested in sports but I had to get involved with physical activities at university. Although my father is an active sportsman but his children no one follows like him. Err ... Maybe I'm the only one who's active despite the fact that I'm not interested in sports. If you want to know more about me and my family, please take the time to read everything I have written on this website. Don't forget to prepare milk and donuts. Enjoy!</p>
+	</div>
+	<h1 style="text-decoration: underline; text-align: center;">MY MOTIVATION QUOTES</h1>
+	<p style="font-style: italic; font-size: 25px; text-align: center;">“Once kau dah mula, jangan berhenti dan teruskan sampai habis“</p>
+	<p style="font-size: 25px; text-align: center;">- by someone I know</p>
+	<br />
+	<br />
+</body>
+</html>
